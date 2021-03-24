@@ -29,6 +29,7 @@ This project will provide two, value-added resources to riders!
    - Specific metrics will be determined throughout week 9 of DSI Program. Recommender systems are still quite new to me.
     - The project appears to be scoped appropriately, based on feedback. However, I'm happy to take additional criticisms/ insights.
    - Does anyone care about this?!  You betcha!  One of the more challenging frustrations to riders in new areas, especially if they don’t have a local to ride with, is choosing the right trail to ride! The results of this recommender system will quickly provide the confidence riders need to be safe, and enjoy the ride.
+
 **Timeline**
 
 **Week 9**: Complete data retrieval.  Scrapper is still running on user data.  Unfortunately, the site I’m pulling data from has strict/long time requirements between pulls, and, since I’ve been an active user on that site since 2013, I don’t want to risk being banned!
@@ -50,7 +51,7 @@ This project will provide two, value-added resources to riders!
 ---
 
 ## Executive Summary
-**Sumamry of methodolgy, production model**
+**Summary of methodolgy, production model**
    
    -  various attributes of discussion for model 
         
@@ -65,6 +66,10 @@ This project will provide two, value-added resources to riders!
 ---
 ### Data Description
 Data utilized for the project analysis was obtained through utilization of the OctoParse web scrapper API tool.  Data was pulled from 6 unique pages within the TrailForks webpage (the leading organization for trail and user data within the mountain biking community).
+
+Data was collect on all, nearly 10,000, registered mountain bike trails in MA.  This project will likely be continued nationwide (an additional 80,000 trails) post-course.
+
+User data is still being scrapped from the web. I'm only able to pull North America user data, so with over 1.5 million user 'checkins' pulled so far, I should, statistically (based on percentage of trails in MA vs North America) have several 10,000's of user checkin data.
 
 Trail feature data along with user data collected is described, below:
 
