@@ -1,4 +1,4 @@
-# <img src="../resources/GA.png" width="25" height="25" />   <span style="color:Purple">DSI Capstone:  MTB Trail Recommender Engine</span> 
+# <img src="./resources/GA.png" width="25" height="25" />   <span style="color:Purple">DSI Capstone:  MTB Trail Recommender Engine</span> 
 ---
 
 
@@ -35,17 +35,17 @@ This project will provide two, value-added resources to riders!
 
 **Week 10**: ALL data to be cleaned/formatted/and EDA completed.
 
-    – The data is, unfortunately, a bit of a mess.  Also, the data is not retrieved in one large CSV.  IT comes in many that need to be combined.
+   * The data is, unfortunately, a bit of a mess.  Also, the data is not retrieved in one large CSV.  IT comes in many that need to be combined.
 
-    -Start on recommender system!
+   * Start on recommender system!
 
 **Week 11**:  Complete recommender system (potential StreamLit app to be generated, time allowing)
 
-    -Prepare presentation/ documentation for project submission
+   * Prepare presentation/ documentation for project submission
 
 **Week 12**: Solicit feedback from peers prior to submission.  
 
-    -Make any necessary last-minute updates! 
+   * Make any necessary last-minute updates! 
 
 ---
 
