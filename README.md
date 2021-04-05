@@ -73,8 +73,10 @@ User data is still being scrapped from the web. I'm only able to pull North Amer
 
 Trail feature data along with user data collected is described, below:
 
-**Data Dictionary created for datasets utilized in this analysis**
+**Data Dictionary created for this analysis**
 
+<div style="float: left">
+    
 | Feature     | dType | Description                |
 |-------------|-------|----------------------------|
 | trail_URL   | str   | URL to specific trail      |
@@ -91,8 +93,9 @@ Trail feature data along with user data collected is described, below:
 | city        | str   | user hometown              |
 | trails      | str   | trails logged by user ride |
 | dist        | int   | length of user ride        |
+</div>    
  
-**(TO BE UPDATED) The following databases were utilized in analysis:**
+**The following databases were utilized in analysis:**
 
 | Database Utilized            | Features Within Database                                         |
 |------------------------------|------------------------------------------------------------------|
