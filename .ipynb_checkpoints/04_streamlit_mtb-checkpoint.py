@@ -62,7 +62,6 @@ elif page == 'Arizona Trail Recommender':
     st.write('''
 From the first page in the WebApp, select a trail you are interested in within Arizona. Enter it in the field below and we'll let you know the top ten trails you should try, based on your input. Or, select trail from [MTB Project](https://www.mtbproject.com/directory/8006911/arizona)''')
  
-
     # when button pressed we check for input errors and start search
     az_trail_name = st.text_input('Enter target AZ trail name:')
  
@@ -76,12 +75,11 @@ From the first page in the WebApp, select a trail you are interested in within A
     sparse_matrix = sparse.csr_matrix(az_trails.fillna(0))
        
     # calculating pairwise distances and building into a dataframe
-    az_rec = pairwise_distances(sparse_matrix, metric = 'cosine')
+    az_recs = pairwise_distances(sparse_matrix, metric = 'cosine')
     
     # saving pairwise matrix as a dataframe
-    az_rec = pd.DataFrame(az_rec, index = az_trails.index, columns = az_trails.index)
+    az_rec = pd.DataFrame(az_recs, index = az_trails.index, columns = az_trails.index)
     
-    # return the dataframe
    
     test = st.button('Search for recommended AZ trails')
   
@@ -89,9 +87,7 @@ From the first page in the WebApp, select a trail you are interested in within A
     #run recommender
     if test:
                
-        st.success('Most similar trails listed below below!')
-        
-        # return top 10 trails in a dataframe
+        st.success('Most similar trails listed below below!')      
         st.write(1-(az_rec[az_trail_name].sort_values().head(11)[1:]))
         st.success('Go Shred!')
 
