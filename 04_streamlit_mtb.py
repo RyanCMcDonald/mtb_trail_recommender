@@ -1,8 +1,5 @@
 ########## Run this code in your terminal to have it hosted on your browser!  In Terminal where file is saved: 'streamlit run 04_streamlit_code.py' ##########
-########## Also hosted live @ https://food-ins-18.herokuapp.com/ ##########
-
-## Code for embedding into in tableau from https://towardsdatascience.com/embedding-tableau-in-streamlit-a9ce290b932b
-## Base code from streamlit lesson
+########## Also hosted live @ https://rcm-mtb-trail.herokuapp.com/  ##########
 
 import streamlit as st
 import streamlit.components.v1 as components
