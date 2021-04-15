@@ -1,25 +1,49 @@
-########## Run this code in your terminal to have it hosted on your browser!  In Terminal where file is saved: 'streamlit run 04_streamlit_code.py' ##########
-########## Also hosted live @ https://rcm-mtb-trail.herokuapp.com/  ##########
+########## Run this code in your terminal to have it hosted on your browser! ##############  
+########## In Terminal where file is saved: 'streamlit run 04_streamlit_code.py' ##########
+########## Also hosted live @ https://rcm-mtb-trail.herokuapp.com/  #######################
+
+################### IMPORTS ###################
 
 import streamlit as st
 import streamlit.components.v1 as components
 import matplotlib.pyplot as plt
 import pandas as pd
 import streamlit as st
-
+import base64
 from scipy import sparse
 from sklearn.metrics.pairwise import pairwise_distances, cosine_similarity
 from sklearn.preprocessing import MinMaxScaler
 # @st.cache(suppress_st_warning=True)
 
+
+################### SIDEBAR CONFIG ###################
+
 st.set_page_config(
     page_icon='📖',
     initial_sidebar_state='expanded'   
 ) 
+main_bg = "off_white_background.jpg"
+main_bg_ext = "jpg"
+
+st.markdown(
+    f"""
+    <style>
+    .reportview-container {{
+        background: url(data:image/{main_bg_ext};base64,{base64.b64encode(open(main_bg, "rb").read()).decode()})
+    }}
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+
 page = st.sidebar.selectbox(
     'Page',
     ('Arizona/ Utah MTB Trails', 'Arizona Trail Recommender', 'Utah Trail Recommender')      
 )
+
+
+################### PAGE 1 ###################
 
 if page == 'Arizona/ Utah MTB Trails':
     st.title('Arizona and Utah MTB Trails')   
@@ -52,6 +76,8 @@ One of the many amazing views in Arizona!
 
     st.image('./resources/sedona_pic.jpg', width=None)
 
+################### PAGE 2 ###################
+
 
 elif page == 'Arizona Trail Recommender':
     st.title('Arizona Trail Recommender')
@@ -77,22 +103,34 @@ From the first page in the WebApp, select a trail you are interested in within A
     # saving pairwise matrix as a dataframe
     az_rec = pd.DataFrame(az_recs, index = az_trails.index, columns = az_trails.index)
     
-   
+    
     test = st.button('Search for recommended AZ trails')
   
 
     #run recommender
     if test:
-               
+    
+    # need this result to reference the trail name index from az_rec and pull column data from az-trails (trail_dashboard)
         st.success('Most similar trails listed below below!')      
         st.write(1-(az_rec[az_trail_name].sort_values().head(11)[1:]))
-        st.success('Go Shred!')
+        
+        
+        st.success('Shred Responsibly!')
 
     else:
         st.error('Please enter a valid trail name in box above')
         # error please input a target trail  
 
 
+    def main():
+        html_temp = """<div class='tableauPlaceholder' id='viz1618502605756' style='position: relative'><noscript><a href='#'><img alt='az_trail_search_dash ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ar&#47;ArizonaandUtahMTBTrails&#47;az_trail_search_dash&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='ArizonaandUtahMTBTrails&#47;az_trail_search_dash' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ar&#47;ArizonaandUtahMTBTrails&#47;az_trail_search_dash&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1618502605756');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='690px';vizElement.style.height='287px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>"""
+        components.html(html_temp, height = 260, width= 690)   
+
+    if __name__ == "__main__":
+        main()          
+        
+################### PAGE 3 ###################
+        
 elif page == 'Utah Trail Recommender':
     st.title('Utah Trail Recommender')
     st.subheader('So, which trail should you ride?')
@@ -129,13 +167,15 @@ From the first page in the WebApp, select a trail you are interested in within U
         
         # return top 10 trails in a dataframe
         st.write(1-(ut_rec[ut_trail_name].sort_values().head(11)[1:]))
-        st.success('Go Shred!')
+        st.success('Shred Responsibly!')
 
     else:
         st.error('Please enter a valid trail name in box above')
         # error please input a target trail  
          
-        
-        ##  Video embed code
-#     with open("./resources/moab_video.mp4", 'rb') as v:
-#         st.video(v)
+    def main():
+        html_temp = """<div class='tableauPlaceholder' id='viz1618502693109' style='position: relative'><noscript><a href='#'><img alt='ut_trail_search_dash ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ut&#47;ut_trail_search&#47;ut_trail_search_dash&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='ut_trail_search&#47;ut_trail_search_dash' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ut&#47;ut_trail_search&#47;ut_trail_search_dash&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1618502693109');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='690px';vizElement.style.height='287px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>"""
+        components.html(html_temp, height = 260, width= 690)   
+
+    if __name__ == "__main__":
+        main()          
