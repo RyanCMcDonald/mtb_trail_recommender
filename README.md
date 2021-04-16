@@ -1,7 +1,6 @@
 # <img src="./resources/GA.png" width="25" height="25" />   <span style="color:Purple">DSI Capstone:  MTB Trail Recommender Engine</span> 
 ---
 
-
 #### Ryan McDonald- General Assembly 
 
 ---

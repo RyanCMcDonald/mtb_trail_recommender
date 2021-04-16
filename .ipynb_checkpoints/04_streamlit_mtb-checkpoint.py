@@ -16,15 +16,16 @@ from sklearn.preprocessing import MinMaxScaler
 # @st.cache(suppress_st_warning=True)
 
 
-################### SIDEBAR CONFIG ###################
+################### SIDEBAR And PAGE CONFIG ###################
 
 st.set_page_config(
     page_icon='📖',
     initial_sidebar_state='expanded'   
 ) 
-main_bg = "off_white_background.jpg"
+main_bg = "streamlit_background_1.jpg"
 main_bg_ext = "jpg"
 
+# setting backgroud of site
 st.markdown(
     f"""
     <style>
@@ -36,29 +37,32 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-
+# selections in drop-down menu on sidebar
 page = st.sidebar.selectbox(
     'Page',
     ('Arizona/ Utah MTB Trails', 'Arizona Trail Recommender', 'Utah Trail Recommender')      
 )
 
 
-################### PAGE 1 ###################
+########################### PAGE 1 ###########################
 
+# Page where user will filter out trails stats and choose which trail to enter into the recommender
 if page == 'Arizona/ Utah MTB Trails':
     st.title('Arizona and Utah MTB Trails')   
     
     st.write('''
-Soft kitty warm kitty little ball of furr sleep but chase mice, so destroy the blinds. Nap all day have my breakfast spaghetti yarn stare at guinea pigs or weigh eight pounds but take up a full-size bed pee in human's bed until he cleans the litter box yet side-eyes your "jerk" other hand while being petted . Lick plastic bags nyan fluffness ahh cucumber!. Make it to the carpet before i vomit mmmmmm jump on human and sleep on her all night long be long in the bed, purr in the morning and then give a bite to every human around for not waking up request food, purr loud scratch the walls, the floor, the windows, the humans, play time, for furball roll roll roll car rides are evil. Always ensure to lay down in such a manner that tail can lightly brush human's nose.
+Whether you're a long-time resident to the area, or a first-time visitor, choosing which trail to ride can be a challenge!  Especially if you have no prior knowledge of the trails or don't know any locals within the riding area. Choosing the wrong trail could lead to a hazardous and unenjoyable ride, or even worse... injury. This page is dedicated to setting you off on the right foot! Below is a map containing all of the mountain bike trails within Arizona and Utah.  Each trail is represented on the map with a dot. Feel free to explore the interactive features of the map and narrow down the types of trails you'd be interested in riding.
     ''')
 
     st.write('''
-Blow up sofa in 3 seconds love fish for jump on human and sleep on her all night long be long in the bed, purr in the morning and then give a bite to every human around for not waking up request food, purr loud scratch the walls, the floor, the windows, the humans so rub butt on table yet lick master's hand at first then bite because im moody so ignore the human until she needs to get up, then climb on her lap and sprawl, to pet a cat, rub its belly, endure blood and agony,
+Of course, trail ratings are relative to those who created them.  Only continue on trails you are comfortable riding and avoid putting yourself in situations above your abilities. Take caution when riding trails for the first time and don't forget the golden rule of mountain biking:
+Pre-Ride, Re-Ride, Freeride! 
+
     ''')
 
     st.subheader('Mountain Bike Trail Filter')
     st.write('''
-More kitty meow meow stuffs and things
+The map below can be used to filter out trails you’d like to ride.  Simply drag the selection bars or select options from the drop-down menus to adjust trail criteria. Once you have found a trail the suits you, feel free to enter into the recommender systems on the next pages represented by the state in which your selected trail resides in.
     ''')
 
     def main():
@@ -84,6 +88,9 @@ elif page == 'Arizona Trail Recommender':
     st.subheader('So, which trail should you ride?')
     st.write('''
 From the first page in the WebApp, select a trail you are interested in within Arizona. Enter it in the field below and we'll let you know the top ten trails you should try, based on your input. Or, select trail from [MTB Project](https://www.mtbproject.com/directory/8006911/arizona)''')
+    
+    st.write('''
+Once the recommender has displayed your results you may search them in the tool below. Stats on each trail searched will display when you hover on the names.  If you'd like more information from MTB Project, click the link that appears when you click on the trail! ''')
  
     # when button pressed we check for input errors and start search
     az_trail_name = st.text_input('Enter target AZ trail name:')
@@ -123,8 +130,8 @@ From the first page in the WebApp, select a trail you are interested in within A
 
 
     def main():
-        html_temp = """<div class='tableauPlaceholder' id='viz1618502605756' style='position: relative'><noscript><a href='#'><img alt='az_trail_search_dash ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ar&#47;ArizonaandUtahMTBTrails&#47;az_trail_search_dash&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='ArizonaandUtahMTBTrails&#47;az_trail_search_dash' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ar&#47;ArizonaandUtahMTBTrails&#47;az_trail_search_dash&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1618502605756');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='690px';vizElement.style.height='287px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>"""
-        components.html(html_temp, height = 260, width= 690)   
+        html_temp = """<div class='tableauPlaceholder' id='viz1618587797220' style='position: relative'><noscript><a href='#'><img alt='az_trail_search_dash ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ar&#47;ArizonaandUtahMTBTrails&#47;az_trail_search_dash&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='ArizonaandUtahMTBTrails&#47;az_trail_search_dash' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ar&#47;ArizonaandUtahMTBTrails&#47;az_trail_search_dash&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1618587797220');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='690px';vizElement.style.height='387px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>"""
+        components.html(html_temp, height = 360, width= 690)   
 
     if __name__ == "__main__":
         main()          
@@ -135,7 +142,10 @@ elif page == 'Utah Trail Recommender':
     st.title('Utah Trail Recommender')
     st.subheader('So, which trail should you ride?')
     st.write('''
-From the first page in the WebApp, select a trail you are interested in within Utah. Enter it in the field below and we'll let you know the top ten trails you should try, based on your input. Or, select trail from [MTB Project](https://www.mtbproject.com/directory/8010491/utah)''')
+From the first page in the WebApp, select a trail you are interested in within Utah. Enter it in the field below and we'll let you know the top ten trails you should try, based on your input. Or, select trail from [MTB Project](https://www.mtbproject.com/directory/8006911/arizona)''')
+    
+    st.write('''
+Once the recommender has displayed your results you may search them in the tool below. Stats on each trail searched will display when you hover on the names.  If you'd like more information from MTB Project, click the link that appears when you click on the trail! ''')
 
     # when button pressed we check for input errors and start search
     ut_trail_name = st.text_input('Enter target UT trail name:')
@@ -174,8 +184,8 @@ From the first page in the WebApp, select a trail you are interested in within U
         # error please input a target trail  
          
     def main():
-        html_temp = """<div class='tableauPlaceholder' id='viz1618502693109' style='position: relative'><noscript><a href='#'><img alt='ut_trail_search_dash ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ut&#47;ut_trail_search&#47;ut_trail_search_dash&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='ut_trail_search&#47;ut_trail_search_dash' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ut&#47;ut_trail_search&#47;ut_trail_search_dash&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1618502693109');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='690px';vizElement.style.height='287px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>"""
-        components.html(html_temp, height = 260, width= 690)   
+        html_temp = """<div class='tableauPlaceholder' id='viz1618587676867' style='position: relative'><noscript><a href='#'><img alt='ut_trail_search_dash ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ut&#47;ut_trail_search&#47;ut_trail_search_dash&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='ut_trail_search&#47;ut_trail_search_dash' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ut&#47;ut_trail_search&#47;ut_trail_search_dash&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1618587676867');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='690px';vizElement.style.height='387px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>"""
+        components.html(html_temp, height = 360, width= 690)   
 
     if __name__ == "__main__":
         main()          
