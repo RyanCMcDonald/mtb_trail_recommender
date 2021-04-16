@@ -1,9 +1,11 @@
-# <img src="./resources/GA.png" width="25" height="25" />   <span style="color:Purple">DSI Capstone:  MTB Trail Recommender Engine</span> 
+# <img src="./resources/GA.png" width="25" height="25" />   <span style="color:Purple">Arizona & Utah MTB Trail Recommender Engine</span> 
 ---
 
-#### Ryan McDonald- General Assembly 
+### Ryan McDonald- Data Scientist 
+[<img src="./resources/github_logo.png" alt="github" width="25"/>](https://github.com/RyanCMcDonald)    [<img src="./resources/linkedin_logo.png" alt="linkedin" width="25"/>](https://www.linkedin.com/in/ryanchristophermcdonald/)   [<img src="./resources/medium_logo.png" alt="medium" width="25"/>](https://ryanmcdata.medium.com/) [<img src="./resources/twitter_logo.png" alt="twitter" width="25"/>](https://twitter.com/RyanMcData) 
 
----
+
+---   
 ### Problem Statement
 For anyone new to mountain biking, or new to a specific trail area, the task can be daunting:
 
