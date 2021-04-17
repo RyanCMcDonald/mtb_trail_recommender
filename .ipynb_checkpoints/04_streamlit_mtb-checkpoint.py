@@ -8,7 +8,6 @@ import streamlit as st
 import streamlit.components.v1 as components
 import matplotlib.pyplot as plt
 import pandas as pd
-import streamlit as st
 import base64
 from scipy import sparse
 from sklearn.metrics.pairwise import pairwise_distances, cosine_similarity
