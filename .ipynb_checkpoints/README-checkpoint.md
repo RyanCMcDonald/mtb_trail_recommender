@@ -9,7 +9,7 @@
 [<img src= "./resources/twitter_logo.png" width="40"/>](https://twitter.com/RyanMcData)
 [<img src= "./resources/webpage.png" alt="webpage" width="33"/>](https://www.ryanmcdata.com)
 <img src= "./resources/arrow.png" width="25"/> **Click Links to Find me!**  
-   
+     
 ---   
 ### Problem Statement   
 For anyone new to mountain biking, or new to a specific trail area, the task can be daunting:
