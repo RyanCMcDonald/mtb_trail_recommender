@@ -38,14 +38,14 @@ Two different types of recommenders were developed with data pulled from MTB Pro
    
    -  An accompanying web app was developed with Streamlit and deployed on Heroku for user to be able to interact with trail features as well as run the content-based trail recommenders for Arizona and Utah mountain bike trails.
         
-        - [<img src="./resources/shred.png" alt="twitter" width="150"/>](https://rcm-mtb-trail.herokuapp.com/) Click to access webapp!
+        - [<img src="./resources/shred.PNG" width="150"/>](https://rcm-mtb-trail.herokuapp.com/) Click to access webapp!
         
         - A user-based binary recommender is available in '03' notebook.
             * To be released to web app once country-wide data is retrieved
         
 ### Arizona/ Utah trail Dashboard
 
-<img src="./resources/trail_dash.png" alt="twitter" width="550"/>
+<img src="./resources/trail_dash.PNG" width="550"/>
            
 ---
 ### Data Description
