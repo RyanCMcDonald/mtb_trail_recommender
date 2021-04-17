@@ -2,9 +2,14 @@
 ---
 
 ### Ryan McDonald- Data Scientist 
-[<img src="./resources/github_logo.png" alt="github" width="35"/>](https://github.com/RyanCMcDonald)    [<img src="./resources/linkedin_logo.png" alt="linkedin" width="35"/>](https://www.linkedin.com/in/ryanchristophermcdonald/)   [<img src="./resources/medium_logo.png" alt="medium" width="35"/>](https://ryanmcdata.medium.com/) [<img src="./resources/twitter_logo.png" alt="twitter" width="35"/>](https://twitter.com/RyanMcData) [<img src="./resources/webpage.png" alt="twitter" width="35"/>](https://www.ryanmcdata.com)<img src="./resources/arrow.png" width="35"/> **Click Links to Find me!** 
-  
 
+[<img src="./resources/github_logo.png" alt="github" width="35"/>](https://github.com/RyanCMcDonald)
+[<img src="./resources/linkedin_logo.png" alt="linkedin" width="35"/>](https://www.linkedin.com/in/ryanchristophermcdonald/)
+[<img src="./resources/medium_logo.png" alt="medium" width="35"/>](https://ryanmcdata.medium.com/)
+[<img src="./resources/twitter_logo.png" alt="twitter" width="35"/>](https://twitter.com/RyanMcData)
+[<img src="./resources/webpage.png" alt="twitter" width="35"/>](https://www.ryanmcdata.com)
+<img src="./resources/arrow.png" width="35"/> **Click Links to Find me!** 
+  
 ---   
 ### Problem Statement
 For anyone new to mountain biking, or new to a specific trail area, the task can be daunting:
