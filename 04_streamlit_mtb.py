@@ -8,6 +8,7 @@ import streamlit as st
 import streamlit.components.v1 as components
 import matplotlib.pyplot as plt
 import pandas as pd
+import numpy as np
 import base64
 from scipy import sparse
 from sklearn.metrics.pairwise import pairwise_distances, cosine_similarity
@@ -121,7 +122,7 @@ Below are all of the trail stats, based on the recommended trails! ''')
         trail_stats = pd.read_csv('./data/trail_dashboard/az_trails.csv')    
     
         # assigning rec data (index) as a variable
-        trails = az_rec[az_trail_name].sort_values().head(11)[1:].index
+        trails = az_rec[az_trail_name].sort_values().head(11).index
     
         # new variable with only rows form stats DF containing names in rec data
         stats = trail_stats[trail_stats['trail_name'].isin(trails)]
@@ -179,17 +180,14 @@ From the first page in the WebApp, select a trail you are interested in within U
     if ut_trail_name:
                
         st.success('Most similar trails listed below below!')
-        
-#         # return top 10 trails in a dataframe
-#         st.write(1-(ut_rec[ut_trail_name].sort_values().head(11)[1:]))
-        
+
         st.write('''
 Below are all of the trail stats, based on the recommended trails! ''')
         # reading in the stats data
         trail_stats_ut = pd.read_csv('./data/trail_dashboard/ut_trails.csv')    
     
         # assigning rec data (index) as a variable
-        trails_ut = ut_rec[ut_trail_name].sort_values().head(11)[1:].index
+        trails_ut = ut_rec[ut_trail_name].sort_values().head(11).index
  
         # new variable with only rows from stats DF containing names in rec data
         stats_ut = trail_stats_ut[trail_stats_ut['trail_name'].isin(trails_ut)]
