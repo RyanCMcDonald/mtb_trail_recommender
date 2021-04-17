@@ -4,20 +4,20 @@
 ### Ryan McDonald- Data Scientist 
 
 [<img src="./resources/github_logo.png" alt="github" width="35"/>](https://github.com/RyanCMcDonald)
-[<img src="./resources/linkedin_logo.png" alt="linkedin" width="35"/>](https://www.linkedin.com/in/ryanchristophermcdonald/)
-[<img src="./resources/medium_logo.png" alt="medium" width="35"/>](https://ryanmcdata.medium.com/)
-[<img src="./resources/twitter_logo.png" alt="twitter" width="35"/>](https://twitter.com/RyanMcData)
-[<img src="./resources/webpage.png" alt="twitter" width="35"/>](https://www.ryanmcdata.com)
-<img src="./resources/arrow.png" width="35"/> **Click Links to Find me!** 
-  
+ [<img src="./resources/linkedin_logo.png" alt="linkedin" width="35"/>](https://www.linkedin.com/in/ryanchristophermcdonald)
+[<img src="./resources/medium_logo.png" alt="medium" width="50"/>](https://ryanmcdata.medium.com/)
+[<img src="./resources/twitter_logo.png" alt="twitter" width="40"/>](https://twitter.com/RyanMcData)
+[<img src="./resources/webpage.png" alt="webpage" width="33"/>](https://www.ryanmcdata.com)
+<img src="./resources/arrow.png" width="25"/> **Click Links to Find me!**  
+     
 ---   
-### Problem Statement
+### Problem Statement   
 For anyone new to mountain biking, or new to a specific trail area, the task can be daunting:
-
-“Which trail should I ride?”
+        
+“Which trail should I ride?”   
 
 “How am I going to get back to the car?”
-
+  
 “Which trails will offer the best training?”
 
 “Am I going to get hurt riding this particular trail?”
@@ -32,18 +32,20 @@ This project will provide two, value-added resources to riders!
 
 ## Executive Summary
 
-### updating this weekend
-**Summary of methodolgy, production model**
+Two different types of recommenders were developed with data pulled from MTB Project mountain bike trails in Arizona and Utah. A content-based trail recommender, and a collaborative binary user recommender.  These two models take in a matrix of pairwise distances and output a list of features based on cosine similarity scores in respect to the trail or user that was entered into the recommender. The biggest effort for this project was retrieving and cleaning the data.
    
-   -  various attributes of discussion for model 
+   -  Trail data required extensive cleaning and formating. Data also needed to be segregated into several seperate dataframes to be utilized for the recommenders as well as the trail dashboard.
+   
+   -  An accomplanying web app was developed with Streamlit and deployed on Heroku for user to be able to interact with trail features as well as run the content-based trail recommenders for Arizona and Utah mountain bike trails.
         
-        -  other models tried...
+        - [<img src="./resources/shred.png" alt="twitter" width="150"/>](https://rcm-mtb-trail.herokuapp.com/) Click to access webapp!
         
-        - something else
+        - A user-based binary recommender is available in '03' notebook.
+            * To be released to web app once country-wide data is retrieved
         
-**streamlit/ tabluea thingy?**
+### Arizona/ Utah trail Dashboard
 
-![a picture](./resources/gui_pic.PNG) 
+<img src="./resources/trail_dash.png" alt="twitter" width="550"/>
            
 ---
 ### Data Description
@@ -105,12 +107,17 @@ Trail feature data along with user data collected is described, below:
 ---      
 ### Analysis - TO BE UPDATED!
 
-### Updating this weekend
+1. A function was developed to handle all of the user data cleaning for each states raw data retrieved from MTB Project.
 
-1. typical numbered things
-2. mroe numbered things, maybe.. who knows
+    * Cleaning provided correctly formatted user data in structured CSV files that could then be manipulated in another notebook to created the recommender.
+
+
+2. A function was also developed to handle formatting and scaling of the nearly 2000 trail datapoints and all teh subsequent trail stats within each point. This funtion will be utilized again once the remainder of nationwide trail data has been successfully gathered. 
+
+    * Again, this data was seperated into several CSV files (some scaled, some combined, etc.) in order to be used for the trail dashboard as well as the content-based recommenders. 
   
-  -  wicked interesting point
+  
+For some exploratory EDA, KMeans Clustering with unsupervised learning was utilized to group/cluster trails together.  The results of the clustering, in comparison to actual geographic data was very correlated. 
   
       ![another pic](./resources/sentiment_table.JPG)
   
