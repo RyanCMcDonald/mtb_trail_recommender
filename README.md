@@ -12,46 +12,6 @@
      
 ---   
 ### Problem Statement   
-
-
-```python:# trail data cleaning function
-
-def trail_cleaning(df):
-    # removing extra characters from 'length' and converting to float
-    df['length']= (df['length'].str.replace('\n    mi','')).astype(float)
-
-    # removing extra characters from 'city'
-    df['city']= (df['city'].str.replace(', AZ',''))
-    
-    # setting text to lowercase for 'trail name'
-    df['trail_name']=df['trail_name'].str.lower()
-    
-    # removing extra characters from 'rating' replacing 'nan' with 0, and converting to float
-    df['rating'] = df['rating'].astype(str).str[:3].str.replace('nan','0').astype(float) 
-
-    # removing '#' from 'arizona_rating' and scaling ranking from 0-1
-    df['popularity']= (1-MinMaxScaler().fit_transform(df['popularity'].str.replace('#','').astype(float).values.reshape(-1,1)))
-
-    # removing extra characters and converting to float for climb, descent, and elevation columns
-    cols = ['tot_climb', 'tot_descent', 'max_elevation', 'min_elevation']
-    # passing replacement and float type to each column
-    df[cols] = df[cols].replace({",":"", "'":""}, regex=True).astype(float)
-
-    # dropping '%' from ave and max_grade columns
-    cols1 = ['ave_grade', 'max_grade']
-    # passing replacement and float type to each column
-    df[cols1] = df[cols1].replace({"%":""}, regex=True).astype(float)
-    
-    #dropping duplicate rows (trails names)
-    df = df.drop_duplicates(subset='trail_name', keep='first', inplace= True)
-    
-    return 
-
-```
-
-
-
-
 For anyone new to mountain biking, or new to a specific trail area, the task can be daunting:
         
 “Which trail should I ride?”   
