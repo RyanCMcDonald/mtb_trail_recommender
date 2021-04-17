@@ -121,7 +121,7 @@ Trail feature data along with user data collected is described, below:
 
 For some exploratory EDA, KMeans Clustering with unsupervised learning was utilized to group/cluster trails together.  The results of the clustering, in comparison to actual geographic data was very correlated. 
   
-  ![another pic](./resources/cluster_pic.PNG)
+  ![another pic](./resources/cluster_pic.png)
   
 3.  Additional supporting analysis is provided in the code notebook for review, as well as additional insights. In depth and detailed processing and review are featured throughout the code notebook within markdown and code- formatted lines. 
 
