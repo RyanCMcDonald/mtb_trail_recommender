@@ -20,6 +20,8 @@ For anyone new to mountain biking, or new to a specific trail area, the task can
 
 “Am I going to get hurt riding this particular trail?”
 
+“Can I bring my dog? Ride my E-Bike?”
+
 The wrong choice can set a rider up for failure, or even worse… injury.  In hopes of providing new-to-the-area riders an alternative to blind guesses, a trail recommender system has been developed to better guide riders to more enjoyable riding experiences!
 This project will provide two, value-added resources to riders!
 
