@@ -134,7 +134,7 @@ Trail feature data along with user data collected is described, below:
 
     * Again, this data was separated into several CSV files (some scaled, some combined, etc.) in order to be used for the trail dashboard as well as the content-based recommenders. 
   
-3. All data was tranferred into a sparse matriz base don pairwise distances to other trails/users.  This could be used to find cosine similarities for all cobincations of trails or users and entered into the recommenders. 
+3. All data was transfered into a sparse matriz based on pairwise distances to other trails/users.  This could be used to find cosine similarities for all combinations of trails or users and entered into the recommenders. 
 
 For some exploratory EDA, KMeans Clustering with unsupervised learning was utilized to group/cluster trails together.  The results of the clustering, in comparison to actual geographic data was very correlated. 
   
@@ -150,6 +150,6 @@ For some exploratory EDA, KMeans Clustering with unsupervised learning was utili
 ---
 ### Conclusions and Recommendations
    
-Choosing which trail to ride shouldn't be a guess.  With the recommenders developed in this project and deployed onto the production webapp, users now have the confidence needed to try new trails and experienc great solo-riding in new areas!
+Choosing which trail to ride shouldn't be a guess.  With the recommenders developed in this project and deployed onto the production webapp, users now have the confidence needed to try new trails and experience great solo-riding in new areas!
 
 The tools utilized in this project can very easily be carried over into other recommenders for hiking, climbing, or any other outdoor activity. As more data is collected, additional functionalities may be added into the recommender (user selected activity types, user logging of trails already utilized).  The options are expansive, but the recommender provided is a great start!
