@@ -151,7 +151,7 @@ elif page == 'Utah Trail Recommender':
     st.title('Utah Trail Recommender')
     st.subheader('So, which trail should you ride?')
     st.write('''
-From the first page in the WebApp, select a trail you are interested in within Utah. Enter it in the field below and we'll let you know the top ten trails you should try, based on your input. Or, select trail from searching [MTB Project](https://www.mtbproject.com/directory/8006911/arizona). Note, the recommender will not take routes.  And spelling counts!''')
+From the first page in the WebApp, select a trail you are interested in within Utah. Enter it in the field below and we'll let you know the top ten trails you should try, based on your input. Or, select trail from searching [MTB Project](https://www.mtbproject.com/directory/8010491/utah). Note, the recommender will not take routes.  And spelling counts!''')
     
    
     # when button pressed we check for input errors and start search
