@@ -111,9 +111,7 @@ From the first page in the WebApp, select a trail you are interested in within A
     if az_trail_name:
     
     # need this result to reference the trail name index from az_rec and pull column data from az-trails (trail_dashboard)
-        st.success('Most similar trails listed below below!')      
-#         # display the similarity score of the rec trails
-#         st.write(1-(az_rec[az_trail_name].sort_values().head(11)[1:]))
+        st.success('Most similar trails listed below!')      
         
         st.write('''
 Below are all of the trail stats, based on the recommended trails! ''')
@@ -146,7 +144,6 @@ Below are all of the trail stats, based on the recommended trails! ''')
     else:
         st.error('Please enter a valid trail name in box above')
         # error please input a target trail  
-    
 
  ################### PAGE 3 UTAH TRAIL RECOMMENDER ###################
         
@@ -179,7 +176,7 @@ From the first page in the WebApp, select a trail you are interested in within U
     #run recommender
     if ut_trail_name:
                
-        st.success('Most similar trails listed below below!')
+        st.success('Most similar trails listed below!')
 
         st.write('''
 Below are all of the trail stats, based on the recommended trails! ''')
@@ -211,3 +208,4 @@ Below are all of the trail stats, based on the recommended trails! ''')
     else:
         st.error('Please enter a valid trail name in box above')
         # error please input a target trail  
+        

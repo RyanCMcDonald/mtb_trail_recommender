@@ -15,8 +15,6 @@
 For anyone new to mountain biking, or new to a specific trail area, the task can be daunting:
         
 “Which trail should I ride?”   
-
-“How am I going to get back to the car?”
   
 “Which trails will offer the best training?”
 
@@ -38,7 +36,7 @@ Two different types of recommenders were developed with data pulled from MTB Pro
    
    -  An accompanying web app was developed with Streamlit and deployed on Heroku for user to be able to interact with trail features as well as run the content-based trail recommenders for Arizona and Utah mountain bike trails.
         
-        - [<img src="./resources/shred.PNG" width="150"/>](https://rcm-mtb-trail.herokuapp.com/) Click to access webapp!
+        - [<img src="./resources/shred.PNG" width="150"/>](https://rcm-mtb-trail.herokuapp.com/) **Click to access webapp!**
         
         - A user-based binary recommender is available in '03' notebook.
             * To be released to web app once country-wide data is retrieved
@@ -59,35 +57,50 @@ Trail feature data along with user data collected is described, below:
 
 **Data Dictionary created for this analysis**
 
+<table>
+<tr><th></th></tr>
+<tr><td>
+
 | Feature           | dType | Description             |
 |-------------------|-------|-------------------------|
 | trail_name        | str   | length of trail (mi)    |
 | length            | float | trail name              |
-| difficulty        | str   | trail difficulty rating |
+| difficulty        | obj   | trail difficulty rating |
 | longitude         | float | ordinate                |
 | latitude          | float | ordinate                |
-| trail_link        | str   | web link                |
+| trail_link        | obj   | web link                |
 | city              | str   | city name               |
 | popularity        | float | popularity (0-1)        |
 | rating            | float | user rating (0-5)       |
-| local_club        | str   | club name               |
-| local_club_site   | str   | web link                |
-| land_manager      | str   | organization name       |
-| land_manager_site | str   | web link                |
+| local_club        | obj   | club name               |
+| local_club_site   | obj   | web link                |
+
+</td><td>
+
+| Feature           | dType | Description             |
+|-------------------|-------|-------------------------|
+| land_manager      | obj   | organization name       |
+| land_manager_site | obj   | web link                |
 | tot_climb         | float | total trail climb       |
 | tot_descent       | float | total trail descent     |
 | ave_grade         | float | slope of trail (avg.)   |
 | max_grade         | float | max slope               |
 | max_elevation     | float | highest point on trail  |
 | min_elevation     | float | lowest point on trail   |
-| dog_policy        | str   | are dogs allowed?       |
-| e_bike_policy     | str   | are e-bikes allowed?    |
+| dog_policy        | obj   | are dogs allowed?       |
+| e_bike_policy     | obj   | are e-bikes allowed?    |
 | user_name         | str   | first name, last name   |
 
+</td></tr> </table>
 
-**The following databases were utilized in analysis:**
 
-| Database Utilized            | Features Within Database                                         |
+**The following tools were utilized in analysis:**
+
+<table>
+<tr><th></th></tr>
+<tr><td>
+
+| Database / Tool Utilized     | Features Within Database                                         |
 |------------------------------|------------------------------------------------------------------|
 | Pandas                       |                                                                  |
 | Numpy                        |                                                                  |
@@ -104,7 +117,11 @@ Trail feature data along with user data collected is described, below:
 | streamlit                    |                                                                  |
 | streamlit.components.v1      | components                                                       |
 | scipy                        | sparse                                                           |
+| OctoParse                    | Web Scraping API                                                 |
 
+</td></tr> </table>
+
+    
 ---      
 ### Analysis 
 
@@ -121,7 +138,7 @@ Trail feature data along with user data collected is described, below:
 
 For some exploratory EDA, KMeans Clustering with unsupervised learning was utilized to group/cluster trails together.  The results of the clustering, in comparison to actual geographic data was very correlated. 
   
-  ![another pic](./resources/cluster_pic.png)
+  ![cluster plot](./resources/cluster_pic.png)
   
 3.  Additional supporting analysis is provided in the code notebook for review, as well as additional insights. In depth and detailed processing and review are featured throughout the code notebook within markdown and code- formatted lines. 
 
